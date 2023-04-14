@@ -1,0 +1,15 @@
+.tagcloud {
+  a {
+    background: var(--babyblueshaded-1);
+    color: var(--white80);
+    text-decoration:none;
+  }
+  a:hover, a:focus {
+    background: $if-primary;
+    color: var(--yellow-light);
+  }
+  .size-zero {}
+  .size-sm {}
+  .size-md {font-size: 20px;line-height: 20px;}
+  .size-lg {font-size: 24px!important;}
+}

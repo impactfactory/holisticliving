@@ -1,0 +1,53 @@
+fields:
+    is_published:
+        label: 'impactfactory.objects::lang.form.obj_published'
+        span: full
+        type: switch
+    name:
+        label: 'impactfactory.objects::lang.form.tag_name'
+        span: full
+        type: text
+tabs:
+    fields:
+        desc:
+            label: 'impactfactory.objects::lang.form.obj_desc'
+            size: small
+            span: full
+            type: richeditor
+            tab: 'impactfactory.objects::lang.form.tag_tab1'
+        slug:
+            label: 'impactfactory.objects::lang.form.obj_slug'
+            span: full
+            preset: name
+            type: text
+            tab: 'impactfactory.objects::lang.form.tag_tab1'
+        image:
+            label: 'impactfactory.objects::lang.form.tag_image'
+            mode: image
+            imageWidth: '300'
+            imageHeight: '300'
+            span: full
+            type: mediafinder
+            tab: 'impactfactory.objects::lang.form.tag_tab1'
+        meta_title:
+            label: Text
+            span: full
+            type: text
+            comment: 'impactfactory.objects::lang.form.tag_meta_title'
+            tab: 'impactfactory.objects::lang.form.tag_tab2'
+        meta_desc:
+            label: 'impactfactory.objects::lang.form.tag_meta_desc'
+            span: full
+            type: text
+            tab: 'impactfactory.objects::lang.form.tag_tab2'
+        searchtags:
+            label: 'impactfactory.objects::lang.form.tag_searchtags'
+            span: full
+            type: text
+            tab: 'impactfactory.objects::lang.form.tag_tab2'
+        meta_image:
+            label: 'impactfactory.objects::lang.form.tag_meta_image'
+            mode: image
+            span: full
+            type: mediafinder
+            tab: 'impactfactory.objects::lang.form.tag_tab2'

@@ -1,0 +1,18 @@
+#contactbox {
+  background: $if-primary;
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,0,1,1) 100%);
+  color: $if-white;
+  //padding: .25rem .25rem .25rem 0;
+  position: fixed;
+  top: -0.1rem;
+  right: -0.25rem;
+
+  a {
+    color: $if-white;
+    text-decoration: none !important;
+  }
+
+  a:hover, a:focus, a:active {
+        text-decoration: underline !important;
+      }
+}

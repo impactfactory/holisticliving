@@ -1,0 +1,10 @@
+name: Cats
+form: $/impactfactory/objects/models/cat/fields.yaml
+modelClass: ImpactFactory\Objects\Models\Cat
+defaultRedirect: impactfactory/objects/cats
+create:
+    redirect: 'impactfactory/objects/cats/update/:id'
+    redirectClose: impactfactory/objects/cats
+update:
+    redirect: impactfactory/objects/cats
+    redirectClose: impactfactory/objects/cats

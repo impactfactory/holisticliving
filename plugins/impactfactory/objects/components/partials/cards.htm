@@ -1,0 +1,78 @@
+{% set objs = __SELF__.objs %}
+
+
+{% for obj in objs %}
+
+
+
+  <div id="obj-{{ obj.id }}" class="objcard col-sm-6 col-md-6 col-lg-4 col-xxl-3 mb-4 {{ obj.type.name }}">
+      {% if obj.type.name == 'video'%}
+          <a href="/{{ obj.slug }}" class="playbutton d-inline">
+            {% partial 'html_body/svg-icons/play' %}
+          </a>
+      {% endif %}
+      <div class="card rounded pb-0">
+        <div class="img-container">
+          <a href="/{{ obj.slug }}"
+             title=" {{ obj.title }}">
+            <picture class="objvisual-img" width="100%">
+                {# Safari <=14 falls back on img if there is not type attribute present at each line! #}
+                <source type="image/webp" media="(max-width: 320px)" srcset="{{ obj.poster | media | resize(400, 204, { mode: 'cover', format: 'webp' }) }}">
+                <source type="image/jpg" media="(max-width: 320px)" srcset="{{ obj.poster | media | resize(400, 204, { mode: 'cover' }) }}">
+                <img class="d-flex mb-0 mr-md-0 mx-auto media-image z-depth-1 fluid"
+                     src="{{ obj.poster | media | resize(400, 204, { mode: 'cover' }) }}"
+                     alt="{{ obj.title }}"
+                     width="100%"
+                     height="204"
+                     loading="lazy"
+                     type="image/jpg"
+                 >
+            </picture>
+          </a>
+        </div> {# end img-container #}
+        <div class="card-body">
+          <a href="/{{ obj.slug }}"
+             title="{{ obj.title }}">
+            <h3 class="card-title h4">
+              {{ obj.title }}
+              <br>
+              <small class="text-muted h6">{{ obj.author_firstname }} {{ obj.author_lastname }}</small>
+            </h3>
+          </a>
+          <hr>
+          <a href="/{{ obj.slug }}" title="{{ obj.title }}" title="{{ obj.title }}">
+            <div class="card-text">
+              {{ obj.excerpt | raw }}
+            </div>
+          </a>
+        </div> {# end card-body #}
+        <div class="card-footer mt-1">
+            <div class="tag w-100">
+              {% if obj.tags|length > 0 %}
+                <strong>{{ 'bloglist.tags.buttons.intro' |_ }}</strong>
+              {% endif %}
+              {% for tag in obj.tags %}
+                  <a href="/{{ localePicker.activeLocale }}/{{ viewBag.localeBlogbase[activeLocale] }}/{{ viewBag.localeTagpagebase[activeLocale] }}/{{ tag.slug }}" title="{{ viewBag.localeTagpagebase[activeLocale] }} {{ tag.name }}">
+                    {{ tag.name }}
+                  </a>
+                  {% if not loop.last %} . {% endif %}
+              {% endfor %}
+            </div>
+            <div class="category-tag">
+              {% if obj.categories|length > 0 %}
+                <strong>{{ 'bloglist.categories.buttons.intro' |_ }}</strong>
+              {% endif %}
+              {% for category in obj.categories %}
+                  <a href="/{{ localePicker.activeLocale }}/{{ viewBag.localeBlogbase[activeLocale] }}/{{ viewBag.localeCategorypagebase[activeLocale] }}/{{ cat.slug }}" title="{{ viewBag.localeCategorypagebase[activeLocale] }} {{ cat.slug }}">
+                    {{ cat.name }}</a>
+                  {% if not loop.last %} . {% endif %}
+              {% endfor %}
+            </div> {# end category-tag #}
+        </div> {# end card-footer #}
+
+      </div> {# end card #}
+    </div> {# end postcard #}
+
+  
+
+{% endfor %}

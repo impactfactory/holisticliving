@@ -1,0 +1,19 @@
+description = "Fügt eine Google Map volle Breite hinzu"
+
+[viewBag]
+snippetCode = "map"
+snippetName = "Karte"
+snippetProperties[mapheight][title] = "Höhe der Karte in Pixeln"
+snippetProperties[mapheight][type] = "string"
+==
+<div id="map-container-google-1" class="z-depth-1-half map-container mt-4" style="height:{{ mapheight-30 }}px;margin-bottom:-30px">
+	<iframe title="Google Map"
+					width='100%'
+					height='{{ mapheight }}'
+					frameborder='0'
+					scrolling='no'
+					marginheight='0'
+					marginwidth='0'
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.555163235651!2d8.725925952338415!3d47.49857857907563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a999d70fc9521%3A0xc8c89941b0160cd9!2sMetzggasse%206%2C%208400%20Winterthur!5e0!3m2!1sde!2sch!4v1650012684343!5m2!1sde!2sch">
+	</iframe>
+</div>

@@ -1,0 +1,42 @@
+items:
+    -
+        title: 'Wie läuft eine Hypnosetherapie-Sitzung ab?'
+        type: url
+        url: /de/hypnose/hypnosesitzung
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            image: /__INHALTSBILDER/cropped-images/keyvisual-wald-451-355-100-100-1649347933.jpg
+    -
+        title: 'Was muss ich vor und nach einer Hypnosesitzung beachten?'
+        type: url
+        url: /de/hypnose/was-muss-ich-vor-und-nach-einer-hypnosetherapie-sitzung-beachten
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            image: /__INHALTSBILDER/cropped-images/keyvisual-wald-321-762-100-100-1649347968.jpg
+    -
+        title: 'Ist die Hypnosetherapie krankenkassen-anerkannt?'
+        type: url
+        url: /de/hypnose/ist-die-hypnosetherapie-krankenkassenanerkannt
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            image: /__INHALTSBILDER/cropped-images/keyvisual-wald-746-240-100-100-1649347983.jpg
+    -
+        title: 'Was ist eigentlich Regressionshypnose?'
+        type: url
+        url: /de/hypnose/was-ist-eigentlich-regressionshypnose
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            image: /__INHALTSBILDER/cropped-images/keyvisual-wald-16-621-100-100-1649348004.jpg
+name: Artikel

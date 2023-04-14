@@ -1,0 +1,39 @@
+
+
+<div class="card col-12 p-4 overflow-hidden">
+    <div class="row g-0">
+      {% if boxtitle %}
+        <h3 class="mb-1">{{ boxtitle }}</h3>
+      {% endif %}
+
+      <div class="col-12 col-sm-5 pb-3">
+          <a href="/{{ person.slug }}" title="{{ person.first_name }} {{ person.last_name }}">
+            <picture>
+              <source type="image/webp" srcset="{{ person.imgbox | media | resize(400, 400, { mode: 'cover', format: 'webp' }) }}">
+              <source type="image/jpg" srcset="{{ person.imgbox | media | resize(400, 400, { mode: 'cover' }) }}">
+              <img type="image/jpg"
+                   src="{{  person.imgbox | media | resize(400, 400, { mode: 'cover' }) }}"
+                   class="img-fluid mr-3 rounded"
+                   width="380"
+                   height="380"
+                   loading="lazy"
+                   alt="Foto {{ person.first_name }} {{ person.last_name }}"
+              >
+            </picture>
+          </a>
+      </div>
+      <div class="col-12 col-sm-7 py-0">
+        <div class="card-body py-0">
+          {{ person.boxtext|raw }}
+          {% if person.boxlink %}
+            <div class="portraitlink right">
+              <a href="/{{ person.slug}}">
+                {% partial 'html_body/svg-icons/externallink' %} {{ person.boxlink }}
+              </a>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+  </div> {# end row #}
+  </div> {# end card #}

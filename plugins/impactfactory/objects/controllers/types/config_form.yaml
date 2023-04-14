@@ -1,0 +1,10 @@
+name: Types
+form: $/impactfactory/objects/models/type/fields.yaml
+modelClass: ImpactFactory\Objects\Models\Type
+defaultRedirect: impactfactory/objects/types
+create:
+    redirect: 'impactfactory/objects/types/update/:id'
+    redirectClose: impactfactory/objects/types
+update:
+    redirect: impactfactory/objects/types
+    redirectClose: impactfactory/objects/types

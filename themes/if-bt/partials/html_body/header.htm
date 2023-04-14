@@ -1,0 +1,36 @@
+[orgaMeta]
+
+[staticMenu mainMenu]
+code = "main"
+
+[viewBag]
+==
+
+{% set orgameta = orgaMeta.meta %}
+
+<header class="fullwrap pt-1 pb-1 mr-0">
+  <div class="indent-me">
+    <div id="logo" class="">
+      <a class="" href="/{{ localePicker.activeLocale }}" title="Home">
+        {% partial 'html_body/svg-icons/logo' %}
+      </a>
+    </div>
+
+    {% partial 'html_body/mainnav' %}
+
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      {% partial 'html_body/svg-icons/bars' %}
+    </button>
+
+    <div class="collapse navbar-collapse d-lg-flex justify-content-end pt-1" id="navbarSupportedContent">
+       {% partial 'html_body/mainnav-small' %}
+    </div>
+
+  </div>
+</header>

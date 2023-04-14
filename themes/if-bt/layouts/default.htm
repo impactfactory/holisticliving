@@ -1,0 +1,56 @@
+description = "Default"
+
+[staticPage]
+useContent = 1
+default = 0
+
+[staticMenu]
+code = "main"
+
+[localePicker]
+forceUrl = 1
+
+[seoTags]
+
+[orgaMeta]
+
+[alternateHrefLangElements]
+
+[viewBag]
+localeBlogbase[de] = "hypnose"
+localeTagpagebase[de] = "stichwort"
+localeCategorypagebase[de] = "thema"
+localeTeambase[en] = "team"
+==
+
+==
+
+{# begin head and all meta tags #}
+  {% component 'seoTags' %}
+{# end head #}
+<body id="top" class="page-{{ this.page.id }} layout-{{ this.page.layout }}">
+
+      <div class="container px-0 mx-0 mw-100">
+
+        {% partial 'html_body/header' %}
+
+        <main class="row mb-4 pb-4 d-flex justify-content-center gx-0">
+          <div class="col-12 col-l2-8 pr-0 content-container">
+            {% page %}
+          </div>
+        </main>
+
+        {% partial 'html_body/footer' %}
+
+      </div>
+
+      {#  % placeholder toasts ignore=true %  #}
+
+      {# % component 'cookiesBar' % #}
+      {% partial "json/breadcrumb" %}
+      {% placeholder json ignore=true %}
+
+      {% partial 'html_body/scripts' %}
+
+    </body>
+</html>

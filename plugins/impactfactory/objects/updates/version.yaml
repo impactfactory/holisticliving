@@ -1,0 +1,23 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table impactfactory_objects_objs'
+    - builder_table_create_impactfactory_objects_objs.php
+1.0.3:
+    - 'Created table impactfactory_objects_types'
+    - builder_table_create_impactfactory_objects_types.php
+1.0.4:
+    - 'Created table impactfactory_objects_tags'
+    - builder_table_create_impactfactory_objects_tags.php
+1.0.5:
+    - 'Created table impactfactory_objects_cats'
+    - builder_table_create_impactfactory_objects_cats.php
+1.0.6:
+    - 'Created table impactfactory_objects_obj_type'
+    - builder_table_create_impactfactory_objects_obj_type.php
+1.0.7:
+    - 'Created table impactfactory_objects_obj_tag'
+    - builder_table_create_impactfactory_objects_obj_tag.php
+1.0.8:
+    - 'Created table impactfactory_objects_obj_cat'
+    - builder_table_create_impactfactory_objects_obj_cat.php

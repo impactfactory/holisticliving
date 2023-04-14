@@ -1,0 +1,35 @@
+title = "Posts in Category"
+url = "/hypnose/thema/:slug"
+layout = "default"
+is_hidden = 0
+meta_title = "Posts in Category"
+meta_description = "Categories Posts"
+robot_index = "index"
+robot_follow = "follow"
+
+[postsincategory]
+[tagcloud]
+
+[viewBag]
+localeUrl[de] = "/hypnose/thema/:slug"
+localeBlogbase[de] = "hypnose"
+localeTagpagebase[de] = "stichwort"
+localeCategorypagebase[de] = "thema"
+==
+<?php
+function onStart()
+{
+    $this['breadcrumbid'] = 'postsincategory';
+}
+
+function onEnd()
+{
+    // Optional - set the page title to the category name
+    if ($this->category)
+        $this->page->title = $this->category->name;
+}
+?>
+==
+
+{% component 'postsincategory' %}
+{% component 'tagcloud' %}

@@ -1,0 +1,40 @@
+title = "Bildende Kunst"
+url = "/kunst/bildende-kunst"
+layout = "default"
+meta_title = "Bildende Kunst"
+meta_description = "Austellungen, Installationen und Bilder von Susanne Buchheim"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+og_title = "Bildende Kunst"
+og_type = "article"
+og_description = "Austellungen, Installationen und Bilder von Susanne Buchheim"
+og_image = "/__PREVIEWS/dth-eingang-1024x768.jpg"
+
+[viewBag]
+localeUrl[de] = "/kunst/bildende-kunst"
+localeUrl[en] = "/art/fine-arts"
+localeBlogbase[de] = "kunst"
+localeBlogbase[en] = "art"
+localeTagpagebase[de] = "stichwort"
+localeTagpagebase[en] = "tag"
+localeCategorypagebase[de] = "thema"
+localeCategorypagebase[en] = "topic"
+localeTitle[en] = "Fine Arts"
+localeMeta_title[en] = "Fine Arts by Susanne Buchheim"
+localeMeta_description[en] = "engl desc"
+localeOg_title[en] = "Fine Arts"
+localeOg_description[en] = "Fine Arts by Susanne Buchheim"
+
+[objsall]
+[tagcloud]
+==
+<?php
+function onStart()
+  {
+    $this['breadcrumbid'] = 'list';
+  }
+?>
+==
+{% component "objsall" %}
+{% component "tagcloud" %}

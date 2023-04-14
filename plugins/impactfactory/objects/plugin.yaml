@@ -1,0 +1,56 @@
+plugin:
+    name: 'impactfactory.objects::lang.plugin.name'
+    description: 'impactfactory.objects::lang.plugin.description'
+    author: ImpactFactory
+    icon: oc-icon-dot-circle-o
+    homepage: ''
+permissions:
+    objects:
+        tab: 'impactfactory.objects::lang.plugin.name'
+        label: 'impactfactory.objects::lang.settings.objects_permission_label'
+    tags:
+        tab: 'impactfactory.objects::lang.plugin.name'
+        label: 'impactfactory.objects::lang.settings.tags_permission_label'
+    cats:
+        tab: 'impactfactory.objects::lang.plugin.name'
+        label: 'impactfactory.objects::lang.settings.cats_permission_label'
+    types:
+        tab: 'impactfactory.objects::lang.plugin.name'
+        label: 'impactfactory.objects::lang.settings.types_permission_label'
+navigation:
+    main-menu-item:
+        label: 'impactfactory.objects::lang.plugin.name'
+        url: impactfactory/objects/objects
+        icon: icon-dot-circle-o
+        permissions:
+            - objects
+        sideMenu:
+            side-menu-item:
+                label: 'impactfactory.objects::lang.nav.objects'
+                url: impactfactory/objects/objects
+                icon: icon-dot-circle-o
+                permissions:
+                    - objects
+            side-menu-tags:
+                label: 'impactfactory.objects::lang.nav.tags'
+                url: impactfactory/objects/tags
+                icon: icon-tags
+                permissions:
+                    - tags
+            side-menu-cats:
+                label: 'impactfactory.objects::lang.nav.cats'
+                url: impactfactory/objects/cats
+                icon: icon-archive
+                permissions:
+                    - cats
+            side-menu-types:
+                label: 'impactfactory.objects::lang.nav.types'
+                url: impactfactory/objects/types
+                icon: icon-th-list
+                permissions:
+                    - types
+dependencies:
+    - rainlab.translate
+    - offline.sitesearch
+    - abwebdevelopers.oc-imageresize-plugin
+    - inetis.listswitch

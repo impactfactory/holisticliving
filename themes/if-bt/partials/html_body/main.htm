@@ -1,0 +1,42 @@
+<main>
+
+  {% if keyvisual %}
+    <picture>
+      <source type="image/webp" media="(max-width: 1120px)" srcset="{{ keyvisual | media | resize(800, 520, { mode: 'cover', format: 'webp' }) }}, {{ keyvisual | media | resize(800, 520, { mode: 'cover', format: 'webp' }) }} 2x">
+
+      <source type="image/webp" media="(max-width: 1279px)" srcset="{{ keyvisual | media | resize(800, 460, { mode: 'cover', format: 'webp' }) }}, {{ keyvisual | media | resize(800, 460, { mode: 'cover', format: 'webp' }) }} 2x">
+
+      <source type="image/webp" media="(max-width: 1439px)" srcset="{{ keyvisual | media | resize(1000, 520, { mode: 'cover', format: 'webp' }) }}, {{ keyvisual | media | resize(1000, 520, { mode: 'cover', format: 'webp' }) }} 2x">
+
+      <source type="image/webp" media="(min-width: 1440px)" srcset="{{ keyvisual | media | resize(1440, 600, { mode: 'cover', format: 'webp' }) }}, {{ keyvisual | media | resize(1440, 600, { mode: 'cover', format: 'webp' }) }} 2x">
+
+      <img src="{{ keyvisual|media }}" width="1440" height="600" id="keyvisual" alt="Keyvisual {{ this.page.meta_title }}" />
+    </picture>
+  {% endif %}
+
+  <article>
+    <h1 class="{% if keyvisual %}onkeyvisual{% endif %}">
+      {{ this.page.meta_title }}
+    </h1>
+
+    <div id="content">
+
+      {% if quote %}
+        <blockquote id="pagemainquote" class="{% if keyvisual %}onkeyvisual{% endif %}">
+          <div class="wrap">
+            <div id="quote>">"{{ quote }}"</div>
+            <div id="author">- {{ author }}</div>
+          </div>
+        </blockquote>
+      {% endif %}
+
+      <div id="page">
+        {% page %}
+      </div>
+
+   </div>
+  </article>
+
+  {% partial 'html_body/footer' %}
+
+</main>

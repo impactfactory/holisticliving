@@ -1,0 +1,4 @@
+title: Cats
+modelClass: ImpactFactory\Objects\Models\Cat
+toolbar:
+    buttons: reorder_toolbar

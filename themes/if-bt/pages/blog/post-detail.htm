@@ -1,0 +1,39 @@
+title = "Hypnose Blog Detail"
+url = "hypnose/:slug"
+layout = "default"
+description = "einzelner Artikel"
+is_hidden = 0
+meta_title = "Artikel zu Hypnose"
+meta_description = "Holistic Living Fabia Zermin"
+robot_index = "index"
+robot_follow = "follow"
+
+[postdetail]
+[tagcloud]
+
+[viewBag]
+localeUrl[de] = "hypnose/:slug"
+localeUrl[ukr] = "hypnose/:slug"
+localeUrl[ru] = "hypnose/:slug"
+localeBlogbase[de] = "hypnose"
+localeBlogbase[ukr] = "hypnose"
+localeBlogbase[ru] = "hypnose"
+localeTagpagebase[de] = "stichwort"
+localeTagpagebase[ukr] = "tag"
+localeTagpagebase[ru] = "tag"
+localeCategorypagebase[de] = "thema"
+localeCategorypagebase[ukr] = "thema"
+localeCategorypagebase[ru] = "thema"
+localeTeambase[de] = "team"
+==
+<?php
+function onStart()
+{
+  $this['breadcrumbid'] = 'post-detail';
+}
+?>
+==
+
+    {% component 'postdetail' %}
+
+    {% component 'tagcloud' %}

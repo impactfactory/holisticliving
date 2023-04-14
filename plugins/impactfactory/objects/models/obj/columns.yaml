@@ -1,0 +1,106 @@
+columns:
+    is_published:
+        label: 'impactfactory.objects::lang.list.published'
+        type: inetis-list-switch
+        searchable: false
+        sortable: true
+    id:
+        label: id
+        type: number
+        invisible: true
+        sortable: true
+    poster:
+        label: 'impactfactory.objects::lang.list.obj_poster'
+        type: partial
+        path: ~/plugins/impactfactory/objects/controllers/objects/_thumb.htm
+        invisible: false
+        sortable: false
+    created_at:
+        label: 'impactfactory.objects::lang.list.obj_created_at'
+        type: datetime
+        invisible: true
+        sortable: true
+    updated_at:
+        label: 'impactfactory.objects::lang.list.obj_updatet_at'
+        type: datetime
+        invisible: true
+        sortable: true
+    title:
+        label: 'impactfactory.objects::lang.list.obj_title'
+        type: text
+        searchable: true
+        sortable: true
+    desc:
+        label: 'impactfactory.objects::lang.list.desc'
+        type: text
+        searchable: true
+        invisible: true
+    create_date:
+        label: 'impactfactory.objects::lang.list.obj_create_date'
+        type: text
+        sortable: true
+    slug:
+        label: Slug
+        type: text
+        invisible: true
+    audios:
+        label: Audios
+        type: text
+        invisible: true
+    fotos:
+        label: Fotos
+        type: text
+        invisible: true
+    videos:
+        label: Videos
+        type: text
+        invisible: true
+    locations:
+        label: Locations
+        type: text
+        invisible: true
+    publication_year:
+        label: 'impactfactory.objects::lang.list.obj_publication_year'
+        type: text
+        invisible: true
+    publication_channel:
+        label: 'impactfactory.objects::lang.list.obj_publication_channel'
+        type: text
+        invisible: true
+    publication_url:
+        label: 'impactfactory.objects::lang.list.obj_publication_url'
+        type: text
+        invisible: true
+    author_firstname:
+        label: 'impactfactory.objects::lang.list.obj_author_firstname'
+        type: text
+        searchable: true
+        invisible: true
+        sortable: false
+    author_lastname:
+        label: 'impactfactory.objects::lang.list.obj_author_lastname'
+        type: text
+        searchable: true
+        invisible: true
+        sortable: false
+    co_authors:
+        label: 'impactfactory.objects::lang.list.obj_co_authors'
+        type: text
+        searchable: true
+        invisible: true
+    reviews:
+        label: 'impactfactory.objects::lang.list.obj_reviews'
+        type: text
+        invisible: true
+    author_url:
+        label: 'impactfactory.objects::lang.list.obj_author_url'
+        type: text
+        invisible: true
+    meta_title:
+        label: 'impactfactory.objects::lang.list.meta_title'
+        type: text
+        invisible: true
+    meta_desc:
+        label: 'impactfactory.objects::lang.list.meta_desc'
+        type: text
+        invisible: true

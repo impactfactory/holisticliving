@@ -1,0 +1,4 @@
+title: Objects
+modelClass: ImpactFactory\Objects\Models\Obj
+toolbar:
+    buttons: reorder_toolbar

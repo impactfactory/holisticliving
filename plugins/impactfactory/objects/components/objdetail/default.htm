@@ -1,0 +1,122 @@
+{% set obj = __SELF__.obj %}
+
+<div class="fullwrap pt-0 objdetail">
+
+  <div class="indent-me">
+
+          <h1>{{ obj.title }}</h1>
+          {{ 'objects.detail.by'|_ }} <a href="{{ obj.author_url }}">{{ obj.author_firstname }} {{ obj.author_lastname }}</a>, {{ obj.create_date }}
+
+          <p>{{ obj.desc | parseSnippets }}</p>
+
+          {% for audio in obj.audios %}
+            <a href="{{ audio.id }}" title="{{ audio.title }}">
+              {{ audio.title }}
+            </a>
+          {% endfor %}
+
+          {% for video in obj.videos %}
+            <a href="{{ video.y_id }}" title="{{ video.label }}">
+              {{ video.label }}
+            </a>
+          {% endfor %}
+
+
+          {% for loc in obj.locations %}
+            <a href="{{ loc.url }}" title="{{ loc.name }}">
+              {{ loc.name }} ({{ loc.year }})
+            </a>
+          {% endfor %}
+
+
+
+          {{ obj.publication_year }}
+
+          {{ obj.publication_channel }}
+
+          {{ obj.publication_url }}
+
+          {% for co in obj.co-authors %}
+            <a href="{{ co.url }}" title="{{ co.firstname }} {{ co.lastname }}">
+              {{ co.firstname }} {{ co.lastname }}
+            </a>
+          {% endfor %}
+
+          {% for rev in obj.reviews %}
+            {{ rev.firstname }} {{ rev.lastname }}, <a href="{{ rev.url }}" title="{{ rev.medium }}">{{ rev.medium }} </a>
+
+              <p>{{ rev.shorttext | raw }}</p>
+
+            <a href="{{ rev.doc }}">Download</a>
+          {% endfor %}
+
+
+
+          <img src="/storage/app/media/{{ obj.poster }}" width="" height="" alt="{{ obj.title }}">
+
+          {% for index, image in obj.fotos %}
+             <img type="image/jpg"
+                  src="{{  image.path | resize(150,120, { mode: 'crop', format: 'jpg' }) }}"
+                  alt="{{ image.title }}"
+                  width="100"
+                  height="100"
+                  loading="lazy">
+          {% endfor %}
+
+          <div class="tag">
+            <strong>{{ 'bloglist.tags.buttons.intro' |_ }}: </strong>
+            {% for tag in obj.tags %}
+                <a href="/{{ localePicker.activeLocale }}/{{ viewBag.localeBlogbase[activeLocale] }}/{{ viewBag.localeTagpagebase[activeLocale] }}/{{ tag.slug }}" title="{{ tag.name }}">
+                  {{ tag.name }}
+                </a>
+                {% if not loop.last %} . {% endif %}
+            {% endfor %}
+          </div>
+
+          <div class="categories">
+            {% if obj.categories.count %}
+              <strong>{{ 'blog.post.publishedin'|_ }}: </strong>
+              {% for category in obj.categories %}
+                 <a href="/{{ localePicker.activeLocale }}/{{ viewBag.localeBlogbase[activeLocale] }}/{{ viewBag.localeCategorypagebase[activeLocale] }}/{{ category.slug }}" title="{{ category.name }}">
+                   {{ category.name }}
+                 </a>
+                 {% if not loop.last %} . {% endif %}
+              {% endfor %}
+            {% endif %}
+
+          </div>    {# end categories #}
+
+
+
+
+
+
+
+  </div> {# end indent-me #}
+</div> {# end fullwrap #}
+
+
+{% put json %}
+<script type="application/ld+json">
+{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": "{{ post.title }}",
+          "image": "{{ post.meta_img | media | app }}",
+          "datePublished": "{{ post.created_at }}",
+          "dateModified": "{{ post.updated_at }}",
+          "author": {
+            "@type": "Person",
+            "name": " {% if post.author.honorific %}{{ post.author.honorific }} {% endif %}{{ post.author.first_name }} {{ post.author.last_name }}"
+          },
+           "publisher": {
+            "@type": "Organization",
+            "name": "{{ orgameta.schema_name }}",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "/storage/app/media{{ orgameta.schema_logo }}"
+            }
+          }
+}
+</script>
+{% endput %}

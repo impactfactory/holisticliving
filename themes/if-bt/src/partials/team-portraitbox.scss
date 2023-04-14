@@ -1,0 +1,85 @@
+.portraitbox {
+  margin-left: 0px!important;
+  margin-right: 0px!important;
+
+  // see custom.css for img hover
+  a.imglink:hover {}
+
+  p a {
+        color: $if-dark;
+      }
+
+  p a:hover {
+    color: $if-primary;
+  }
+
+  .svg-inline--fa {
+    height: 24px;
+    transform: translateY(-3px);
+  }
+
+  .portraitlink {
+    background-color: var(--lightblue);
+    //color: var(--black80);
+    margin: 10px 0 0 0;
+    position:relative;
+    padding: 4px 8px 4px 8px;
+
+    a {
+      color: var(--black80);
+      display:block;
+      text-decoration: none;
+    }
+
+    a:hover, :focus, :active {
+        color: var(--white100);
+      }
+   }
+
+   .right {
+     left: -4rem;
+     border-radius: 1em 1em;
+     border-radius: 1em 1em;
+     width: 800px;
+
+     i {
+       margin-left:10px;
+     }
+
+   }
+
+   .left {
+     left: -1.5rem;
+     border-radius: 0 1rem 1em 0;
+     border-bottom-right-radius: 1em 1em;
+     width:450px;
+
+     i {
+       margin-left:10px;
+     }
+   }
+
+   .left:hover, .right:hover { background-color: var(--darkblue); }
+
+   .picpositionright .card-body {
+     padding-left:0!important;
+   }
+
+   /* thirdwith views */
+
+   .thirdwidth {
+     margin: 0;
+   }
+}
+
+@media only screen and (max-width: 576px) {
+
+  .right {
+    display:block;
+    left: 0!important;
+    margin: 0 auto!important;
+    padding: 1rem!important;
+    width: 100%!important;
+  }
+
+}

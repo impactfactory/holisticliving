@@ -1,0 +1,45 @@
+columns:
+    is_published:
+        label: 'impactfactory.objects::lang.list.published'
+        type: inetis-list-switch
+        sortable: true
+    id:
+        label: id
+        type: number
+        searchable: true
+        invisible: true
+        sortable: true
+    name:
+        label: 'impactfactory.objects::lang.list.name'
+        type: text
+        searchable: true
+        sortable: true
+    desc:
+        label: 'impactfactory.objects::lang.list.desc'
+        type: text
+        searchable: true
+        invisible: true
+    image:
+        label: 'impactfactory.objects::lang.list.image'
+        type: text
+        invisible: true
+    slug:
+        label: slug
+        type: text
+        invisible: true
+    meta_title:
+        label: 'impactfactory.objects::lang.list.meta_title'
+        type: text
+        invisible: true
+    meta_desc:
+        label: 'impactfactory.objects::lang.list.meta_desc'
+        type: text
+        invisible: true
+    meta_image:
+        label: 'impactfactory.objects::lang.list.meta_image'
+        type: text
+        invisible: true
+    searchtags:
+        label: 'impactfactory.objects::lang.list.searchtags'
+        type: text
+        searchable: true

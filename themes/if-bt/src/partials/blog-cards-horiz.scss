@@ -1,0 +1,62 @@
+.postcard {
+  background-color:transparent!important;
+  padding: 0 0 0 0!important;
+
+  a {
+      color: $if-dark;
+      text-decoration: none;
+
+      :visited {
+        color: inherit;
+       }
+  }
+
+  .card-body {
+
+    h3 {
+      margin: 0 0 0 0!important;
+      padding: 0 0 0 0!important;
+
+      small {
+        display: block;
+        font-size:14px;
+        position: relative;top:0;
+      }
+    }
+  }
+
+  .card-footer {
+    padding-left: 0px!important;
+
+    .timetoread, .category-tag, .tag {
+      font-size:14px;
+      font-variant: small-caps;
+    }
+
+    .tag {
+      color: $if-dark;
+
+        a {
+        color: $if-dark;
+      }
+   }
+ }
+}
+
+
+
+.postcard:hover {
+
+    .card {
+      background-color:var(--green)!important;
+    }
+
+    a h3, a h3 small, a .card-text, .timetoread, .tag, .tag a {
+      text-decoration: none;
+    }
+
+    .category-tag {
+
+        a {}
+    }
+  }

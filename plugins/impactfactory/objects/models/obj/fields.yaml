@@ -1,0 +1,249 @@
+fields:
+    is_published:
+        label: 'impactfactory.objects::lang.form.obj_published'
+        span: full
+        type: switch
+    title:
+        label: 'impactfactory.objects::lang.form.obj_title'
+        span: full
+        type: text
+tabs:
+    fields:
+        create_date:
+            label: 'impactfactory.objects::lang.form.obj_create_date'
+            span: left
+            type: number
+            tab: 'impactfactory.objects::lang.form.obj_tab1'
+        slug:
+            label: 'impactfactory.objects::lang.form.obj_slug'
+            span: right
+            preset: title
+            type: text
+            tab: 'impactfactory.objects::lang.form.obj_tab1'
+        desc:
+            label: 'impactfactory.objects::lang.form.obj_desc'
+            size: large
+            span: full
+            type: richeditor
+            tab: 'impactfactory.objects::lang.form.obj_tab1'
+        publication:
+            label: 'impactfactory.objects::lang.form.obj_pubsection'
+            span: full
+            type: section
+            tab: 'impactfactory.objects::lang.form.obj_tab1'
+        publication_year:
+            label: 'impactfactory.objects::lang.form.obj_pubyear'
+            span: auto
+            type: number
+            tab: 'impactfactory.objects::lang.form.obj_tab1'
+        publication_channel:
+            label: 'impactfactory.objects::lang.form.obj_pubchannel'
+            span: auto
+            type: text
+            tab: 'impactfactory.objects::lang.form.obj_tab1'
+        publication_url:
+            label: 'impactfactory.objects::lang.form.obj_puburl'
+            span: full
+            type: text
+            tab: 'impactfactory.objects::lang.form.obj_tab1'
+        locations:
+            label: 'impactfactory.objects::lang.form.obj_locations'
+            prompt: neu
+            span: full
+            style: collapsed
+            type: repeater
+            titleFrom: name
+            tab: 'impactfactory.objects::lang.form.obj_tab1'
+            form:
+                fields:
+                    name:
+                        label: 'impactfactory.objects::lang.form.obj_location_name'
+                        span: left
+                        type: text
+                    year:
+                        label: 'impactfactory.objects::lang.form.obj_locations_year'
+                        span: right
+                        type: number
+                    url:
+                        label: 'impactfactory.objects::lang.form.obj_location_url'
+                        span: full
+                        type: text
+        authors:
+            label: 'impactfactory.objects::lang.form.obj_authorssection'
+            span: full
+            type: section
+            tab: 'impactfactory.objects::lang.form.obj_tab1'
+        author_firstname:
+            label: 'impactfactory.objects::lang.form.obj_author_firstname'
+            span: left
+            type: text
+            tab: 'impactfactory.objects::lang.form.obj_tab1'
+        author_lastname:
+            label: 'impactfactory.objects::lang.form.obj_author_lastname'
+            span: right
+            type: text
+            tab: 'impactfactory.objects::lang.form.obj_tab1'
+        author_url:
+            label: 'impactfactory.objects::lang.form.obj_author_url'
+            span: full
+            type: text
+            tab: 'impactfactory.objects::lang.form.obj_tab1'
+        co_authors:
+            label: 'impactfactory.objects::lang.form.obj_coauthors'
+            prompt: neu
+            span: full
+            style: collapsed
+            type: repeater
+            titleFrom: lastname
+            tab: 'impactfactory.objects::lang.form.obj_tab1'
+            form:
+                fields:
+                    firstname:
+                        label: 'impactfactory.objects::lang.form.obj_author_firstname'
+                        span: left
+                        type: text
+                    lastname:
+                        label: 'impactfactory.objects::lang.form.obj_author_lastname'
+                        span: right
+                        type: text
+                    url:
+                        label: 'impactfactory.objects::lang.form.obj_puburl'
+                        span: full
+                        type: text
+        poster:
+            label: 'impactfactory.objects::lang.form.obj_poster'
+            mode: image
+            imageWidth: '300'
+            imageHeight: '300'
+            span: full
+            type: mediafinder
+            tab: 'impactfactory.objects::lang.form.obj_tab2'
+        fotos:
+            label: 'impactfactory.objects::lang.form.obj_fotos'
+            mode: image
+            imageWidth: '300'
+            imageHeight: '300'
+            span: full
+            type: fileupload
+            tab: 'impactfactory.objects::lang.form.obj_tab2'
+        videos:
+            label: 'impactfactory.objects::lang.form.obj_videos'
+            prompt: neu
+            span: full
+            style: collapsed
+            type: repeater
+            titleFrom: label
+            tab: 'impactfactory.objects::lang.form.obj_tab2'
+            form:
+                fields:
+                    label:
+                        label: 'impactfactory.objects::lang.form.obj_video_label'
+                        span: right
+                        type: text
+                    y_id:
+                        label: 'impactfactory.objects::lang.form.obj_video_id'
+                        span: left
+                        type: text
+        audios:
+            label: 'impactfactory.objects::lang.form.obj_audios'
+            prompt: neu
+            span: full
+            style: collapsed
+            type: repeater
+            titleFrom: label
+            tab: 'impactfactory.objects::lang.form.obj_tab2'
+            form:
+                fields:
+                    title:
+                        label: 'impactfactory.objects::lang.form.obj_audio_label'
+                        span: right
+                        type: text
+                    id:
+                        label: 'impactfactory.objects::lang.form.obj_audio_id'
+                        span: left
+                        type: text
+        types:
+            label: 'impactfactory.objects::lang.form.obj_types'
+            mode: relation
+            separator: space
+            customTags: 0
+            useKey: false
+            span: full
+            type: taglist
+            tab: 'impactfactory.objects::lang.form.obj_tab3'
+        tags:
+            label: 'impactfactory.objects::lang.form.obj_tags'
+            mode: relation
+            separator: space
+            customTags: 0
+            useKey: false
+            span: full
+            type: taglist
+            tab: 'impactfactory.objects::lang.form.obj_tab3'
+        categories:
+            label: 'impactfactory.objects::lang.form.obj_categories'
+            mode: relation
+            separator: space
+            customTags: 0
+            useKey: false
+            span: full
+            type: taglist
+            tab: 'impactfactory.objects::lang.form.obj_tab3'
+        meta_title:
+            label: 'impactfactory.objects::lang.form.obj_metatitle'
+            span: full
+            type: text
+            tab: 'impactfactory.objects::lang.form.obj_tab4'
+        meta_desc:
+            label: 'impactfactory.objects::lang.form.obj_meta_desc'
+            span: full
+            type: text
+            tab: 'impactfactory.objects::lang.form.obj_tab4'
+        meta_image:
+            label: 'impactfactory.objects::lang.form.obj_meta_image'
+            mode: image
+            imageWidth: '300'
+            imageHeight: '300'
+            span: full
+            type: mediafinder
+            tab: 'impactfactory.objects::lang.form.obj_tab4'
+        reviews:
+            label: 'impactfactory.objects::lang.form.obj_reviews'
+            prompt: 'eine weitere dazufügen'
+            span: full
+            style: collapsed
+            type: repeater
+            titleFrom: review_medium
+            tab: 'impactfactory.objects::lang.form.obj_tab5'
+            form:
+                fields:
+                    firstname:
+                        label: 'impactfactory.objects::lang.form.obj_author_firstname'
+                        span: left
+                        type: text
+                    lastname:
+                        label: 'impactfactory.objects::lang.form.obj_author_lastname'
+                        span: right
+                        type: text
+                    medium:
+                        label: 'impactfactory.objects::lang.form.obj_reviews_medium'
+                        span: left
+                        type: text
+                    year:
+                        label: 'impactfactory.objects::lang.form.obj_review_year'
+                        span: right
+                        type: number
+                    url:
+                        label: 'impactfactory.objects::lang.form.obj_location_url'
+                        span: full
+                        type: text
+                    doc:
+                        label: 'impactfactory.objects::lang.form.obj_review_doc'
+                        mode: file
+                        span: full
+                        type: mediafinder
+                    shorttext:
+                        label: 'impactfactory.objects::lang.form.obj_review-shorttext'
+                        size: tiny
+                        span: full
+                        type: richeditor

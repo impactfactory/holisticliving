@@ -1,0 +1,10 @@
+name: Objects
+form: $/impactfactory/objects/models/obj/fields.yaml
+modelClass: ImpactFactory\Objects\Models\Obj
+defaultRedirect: impactfactory/objects/objects
+create:
+    redirect: 'impactfactory/objects/objects/update/:id'
+    redirectClose: impactfactory/objects/objects
+update:
+    redirect: impactfactory/objects/objects
+    redirectClose: impactfactory/objects/objects

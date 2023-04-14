@@ -1,0 +1,54 @@
+items:
+    -
+        title: Angebot
+        nesting: 1
+        type: static-page
+        url: null
+        code: nav.main.offer
+        reference: angebot
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            image: ''
+    -
+        title: Praxis
+        nesting: 1
+        type: static-page
+        url: null
+        code: nav.main.practice
+        reference: praxis
+        cmsPage: null
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            image: ''
+    -
+        title: 'Fabia Zermin'
+        nesting: null
+        type: url
+        url: /fabia-zermin
+        code: nav.main.fabia
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            image: ''
+    -
+        title: 'Hypnose A-Z'
+        type: url
+        url: /de/hypnose
+        code: nav.main.blog
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            image: ''
+name: 'Inhalte (Haupt-Navigation)'

@@ -1,0 +1,89 @@
+{% set org = orgaMeta.meta %}
+
+<footer class="col-12 m-0">
+  <section class="fullwrap col-12 text-center pt-4 pb-3 d-print-none">
+    <div class="indent-me row">
+
+{# address #}
+      <address class="col-12 col-md-11">
+
+        <picture class="address-img" width="100%">
+           <source type="image/webp" srcset="{{ org.img | media | resize(250, 250, { mode: 'cover', format: 'webp' }) }}">
+           <source type="image/jpg"  srcset="{{ org.img | media | resize(250, 250, { mode: 'cover'  }) }}">
+           <img    type="image/jpg"  src="{{  org.img | media | resize(250, 250, { mode: 'cover' }) }}" class="address-img" alt="{{ org.schema_founder_name }}" width="250" height="250">
+        </picture>
+
+        <div id="postal">
+          <div class="postaltitle">{{ org.schema_name }} {{ org.schema_founder_name }}</div>
+          <div>{{ org.schema_street }} {{ org.schema_no }}</div>
+          <div>{{ org.schema_zip }} {{ org.schema_city }}</div>
+        </div>
+
+        <div id="phone">
+          <a href="tel:{{ org.schema_phone }}" title="{{ 'address.phone.title'|_ }}">
+            {% partial 'html_body/svg-icons/phone' %} {{ 'address.phone.title'|_ }}
+          </a>
+        </div>
+
+        <div id="mail" class="">
+          {% partial 'html_body/svg-icons/email' %}
+          <div class="protectedmailsnippet d-inline">
+          <script>
+          user = '{{ 'address.mail.name'|_ }}';
+          site = '{{ 'address.mail.domain'|_ }}';
+          var elements = document.getElementsByClassName('protectedmailsnippet');
+            Array.prototype.forEach.call(elements, function(element) {
+                element.innerHTML = '<a href=\"mailto:' + user + '@' + site + '\" title="Mail">'+ user + '@' + site +'</a><br>';
+            });
+          </script>
+          </div>
+        </div>
+
+        <div id="socials" class="pt-4">
+          <a href="https://www.facebook.com/Holistic-Living-Ganzheitliche-Heilung-103538408028379" title="Facebook">
+            {% partial 'html_body/svg-icons/facebook' %}
+            Facebook
+          </a><br>
+          <a href="https://de.linkedin.com/in/fabia-zermin-178150101" title="LinkedIn">
+            {% partial 'html_body/svg-icons/linkedin' %}
+            LinkedIn
+          </a>
+        </div>
+
+     </address>
+
+{# up #}
+      <div id="upwards" class="col-12 col-md-1 placeitemscenter">
+        <a href="#top" title="{{ 'footer.backtotop.label'|_ }}">
+          {% partial 'html_body/svg-icons/up' %}
+          {{ 'footer.backtotop.label'|_ }}
+        </a>
+      </div>
+
+{# byline #}
+      <div class="col-12 byline pt-4 mt-4">
+        <small>
+          <a href="https://impactfactory.ch" rel="noopener" title="Webdesign Websites WinterCMS Laravel">
+            Powered by ImpactFactory
+          </a>
+          |
+          <a href="/{{ activeLocale }}">&copy; 2022 - {{ "now"|date("Y") }}
+            {{ orgaMeta.meta.schema_name }}
+          </a>
+          |
+          <a href="{{ 'bedingungen-und-richtlinien' | staticPage }}" title="{{ 'footer.link.agb'|_ }}">
+            {{ 'footer.link.agb'|_ }}
+          </a>
+          |
+          <a href="{{ 'impressum' | staticPage }}" title="{{ 'footer.link.imprint'|_ }}">
+            {{ 'footer.link.imprint'|_ }}
+          </a>
+          |
+          <a href="{{ 'datenschutz' | staticPage }}" title="{{ 'footer.link.dataprivacy'|_ }}">
+            {{ 'footer.link.dataprivacy'|_ }}
+          </a>
+        </small>
+      </div>
+    </div>
+  </section>
+</footer>

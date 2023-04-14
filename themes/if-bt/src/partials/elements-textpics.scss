@@ -1,0 +1,21 @@
+.textpic {
+
+  h3 {
+    padding-top: 0!important;
+  }
+
+  .right {
+    padding-left:0 !important;
+  }
+
+  .card-body:hover {
+    background: none!important;
+  }
+}
+
+/* exception on frontpage */
+
+.layout-frontpage .textpic h3.card-title {
+    @extend .h2;
+    margin-top: -1.5rem!important; //dirty override of .h2 ;(
+}

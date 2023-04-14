@@ -1,0 +1,112 @@
+  .frontpage address .address-img,
+  .page-team-person address .address-img {
+    display:none!important;
+  }
+
+  footer {
+  background: var(--black70);
+  background: var(--gr-black70);
+  border-top: 1px solid var(--white100);
+  color: var(--white100);
+  padding: 1rem 1rem 0 1rem;
+  position: relative!important;
+   bottom: 0px!important;
+  text-align:left;
+  width: 100%;
+
+  .row {
+    background: var(--white10);
+    border-radius: 20px;
+    padding: 1rem 1rem 1rem 1rem;
+    text-align: left;
+  }
+
+  a {
+    color: var(--white100);
+    text-decoration: none;
+  }
+
+  a:hover, a:active {
+    color: var(--lightblue);
+    text-decoration: underline;
+  }
+
+  address {
+
+    .address-img {
+      border-radius: var(--br10);
+      float:right;
+      margin: .1rem .25rem 0 2rem;
+    }
+
+    #postal {
+      padding-left: 2rem;
+
+      .postaltitle {
+      font-weight: var(--fw-bold);
+      }
+    }
+  }
+
+  .svg-inline--fa {
+    height: 20px;
+    padding-right: .8rem;
+    transform: translateY(-.1rem);
+  }
+
+  #socials {
+
+    .svg-inline--fa {
+      height: 22px;
+      transform: translateY(-.1rem);
+    }
+  }
+
+  #upwards {
+
+    a {
+      color: var(--white100);
+      text-align: center;
+    }
+
+    .svg-inline--fa {
+      display:block;
+      height: 120px;
+      padding-left: 0rem;
+      opacity: 1;
+      transform: translateX(.5rem);
+    }
+
+    a:hover, .svg-inline--fa:hover {
+      color: var(--lightblue);
+      opacity:1;
+      text-decoration:none;
+    }
+  }
+
+  .byline {
+    text-align: left;
+
+    a {
+      color: var(--white70);
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  address .address-img {
+    display:none;
+  }
+  }
+
+@media only screen and (min-width: 1120px) {
+
+  footer.imprint {
+    display:flex;
+    justify-content: flex-end;
+    padding: 1rem 1rem 0 3rem;
+    position: absolute;
+     bottom: 3rem;
+  }
+}

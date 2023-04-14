@@ -1,0 +1,85 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--white100);//var(--gr-yellow-light)!important;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+//removing focus rings for all not-keyboard users
+// consider form usability here and change!
+body:not(.user-is-tabbing) .btn-check:focus,
+body:not(.user-is-tabbing) .btn-primary:focus,
+body:not(.user-is-tabbing) .btn-secondary:focus,
+body:not(.user-is-tabbing) .accordion-button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none!important;
+  box-shadow: none;
+}
+
+/* lazy man centering where needed :) */
+.placeitemscenter { display: grid; place-items: center; }
+
+/* froala editor css */
+.fr-img-caption {
+  background: var(--white100);
+  border-radius: 4px;
+  display:block;
+  margin: 0 0 20px 0;
+  padding:0 0 5px 0;
+  position: relative; top: 17px!important;
+
+  img {
+    width: 100%!important;
+    border-radius: 4px 4px 0 0;
+  }
+}
+
+.fr-inner {
+  display:block;
+  font-size: 12px;
+  //text-transform: capitalize;
+  padding: 10px 10px 5px 10px;
+  margin: 0 ;
+}
+
+.fr-fic {
+  border-radius: 4px;
+  max-width: 100% !important;
+}
+.fr-dii {}
+
+.fr-fil {
+  float: left;
+  margin: 0 20px 10px 0;
+  position: relative; top: 5px;
+}
+.fr-fir {
+  float: right;
+  margin: 0 0 10px 20px;
+  position: relative; top: 5px;
+}
+
+.container {
+  max-width:100%!important;
+  min-width: 100%!important;
+  min-height: 100%!important;
+  margin: 0!important;
+  padding:0!important;
+  width:100%!important;
+}
+
+
+@media only screen and (min-width: 1120px) {
+
+  html {
+    height: 100%;
+  }
+
+  .container {}
+
+}

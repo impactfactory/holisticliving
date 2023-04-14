@@ -1,0 +1,28 @@
+title = "Posts mit Tag"
+url = "/hypnose/stichwort/:slug"
+layout = "default"
+is_hidden = 0
+meta_title = "Posts mit Stichwort"
+meta_description = "Posts mit Stichwort"
+robot_index = "index"
+robot_follow = "follow"
+
+[postswithtag]
+[tagcloud]
+
+[viewBag]
+localeUrl[de] = "/hypnose/stichwort/:slug"
+localeBlogbase[de] = "hypnose"
+localeTagpagebase[de] = "stichwort"
+localeCategorypagebase[de] = "thema"
+==
+
+<?php
+function onStart()
+{
+    $this['breadcrumbid'] = 'postswithtag';
+}
+?>
+==
+{% component 'postswithtag' %}
+{% component 'tagcloud' %}

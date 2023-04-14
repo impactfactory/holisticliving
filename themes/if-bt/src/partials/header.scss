@@ -1,0 +1,56 @@
+header {
+  //background: var(--black70);
+  background: var(--darkblue);
+  background: var(--gr-black70);
+
+
+.indent-me {
+  padding: 0 0 0 0!important;
+
+  #logo {
+      display:inline-block;
+      height: auto;
+      padding: .75rem .25rem .75rem .25rem;
+      width: 80%;
+
+      a {
+        color: rgba(255,255,255,0.8); //#eacb21;//var(--white100);
+        display:block;
+      }
+
+      // navigation see nav.scss
+    }
+
+    .navbar-toggler {
+      display:inline-block;
+      color: var(--white100);
+      height: 65px;
+      margin-left: 0;
+      width: 50px;
+    }
+
+    .navbar-collapse {}
+ }
+}
+
+@media only screen and (min-width: 768px) {
+
+  header {
+    //overflow: hidden;
+    width: 100%;
+
+  .indent-me {
+    padding: 2rem 0 0 0!important;
+
+    #logo {
+        display:block;
+        margin: 0 auto;
+        width:90%;
+
+        // navigation see nav.scss
+      }
+
+    .navbar-toggler, .navbar-collapse {display:none;}
+  }
+ }
+}

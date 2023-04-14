@@ -1,0 +1,40 @@
+title = "Object Detail"
+url = "/art/:slug"
+layout = "default"
+description = "einzelnes Kunstobjekt"
+is_hidden = 0
+meta_title = "Art Object"
+meta_description = "Art Object"
+robot_index = "index"
+robot_follow = "follow"
+
+[objdetail]
+
+
+
+[viewBag]
+localeUrl[en] = "art/:slug"
+localeUrl[de] = "kunst/:slug"
+localeUrl[fr] = "art/:slug"
+localeUrl[it] = "arte/:slug"
+localeBlogbase[en] = "art"
+localeBlogbase[de] = "kunst"
+localeBlogbase[it] = "arte"
+localeBlogbase[fr] = "art"
+localeTagpagebase[en] = "tag"
+localeTagpagebase[de] = "stichwort"
+localeCategorypagebase[en] = "topic"
+localeCategorypagebase[de] = "thema"
+localeTeambase[en] = "team"
+localeTeambase[de] = "team"
+localeTeambase[it] = "team"
+localeTeambase[fr] = "team"
+==
+<?php
+function onStart()
+{
+  $this['breadcrumbid'] = 'obj-detail';
+}
+?>
+==
+{% component 'objdetail' %}

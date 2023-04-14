@@ -1,0 +1,15 @@
+static-pages:
+    home: {  }
+    impressum: {  }
+    datenschutz: {  }
+    bedingungen-und-richtlinien: {  }
+    angebot:
+        angebot-akute-situationen: {  }
+        angebot-mehr-lebensqualitaet: {  }
+        angebot-bewusstseinserweiterung: {  }
+        angebot-yoga: {  }
+        angebot-ausgleich: {  }
+    praxis:
+        praxis-standorte: {  }
+        praxis-nuetzliche-links: {  }
+    faqs: {  }

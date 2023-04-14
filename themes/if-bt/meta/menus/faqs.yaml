@@ -1,0 +1,36 @@
+items:
+    -
+        title: 'Wie fühlt sich Hypnose an?'
+        type: url
+        url: '/de/faqs#question-1-4'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            image: ''
+    -
+        title: 'Wer kann nicht hypnotisiert werden?'
+        type: url
+        url: '/de/faqs#question-1-7'
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            image: ''
+    -
+        title: 'Wieviele Sitzungen sind nötig?'
+        nesting: null
+        type: url
+        url: '/de/faqs#question-1-8'
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            image: ''
+name: FAQ
